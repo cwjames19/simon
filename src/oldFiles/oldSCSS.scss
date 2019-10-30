@@ -1,0 +1,109 @@
+// $red-inactive: #d80000;
+// $red-active: #ff3535;
+// $yellow-inactive: #d8d800;
+// $yellow-active: yellow;
+// $blue-inactive: #0008af;
+// $blue-active: #160aff;
+// $green-inactive: #11bf01;
+// $green-active: #1af202;
+// $dark-grey: #3b3b3d;
+// $active-button-stroke: #e8e8ba;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: lightblue;
+}
+
+main {
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  background-color: lavender;
+  justify-content: center;
+  align-items: center;
+}
+
+.trim {
+  fill: $dark-grey;
+}
+
+.interactive:hover {
+  cursor: pointer;
+}
+
+.active.color-button {
+  stroke: $active-button-stroke;
+  stroke-width: 3px;
+}
+
+#red {
+  fill: $red-inactive;
+
+  &.active {
+    fill: $red-active;
+  }
+}
+
+#blue {
+  fill: $blue-inactive;
+
+  &.active {
+    fill: $blue-active;
+  }
+}
+
+#yellow {
+  fill: $yellow-inactive;
+
+  &.active {
+    fill: $yellow-active;
+  }
+}
+
+#green {
+  fill: $green-inactive;
+
+  &.active {
+    fill: $green-active;
+  }
+}
+
+#game-controls-background {
+  fill: cornsilk;
+}
+
+#simon-title {
+  color: black;
+  font-size: 3.2em;
+  font-weight: 800;
+}
+
+#count-display-text {
+  display: none;
+}
+
+#strict-mode-lamp.active {
+  fill: red;
+}
+
+#power-square {
+  fill: lightblue;
+  transform: translate(0px, 0px);
+  transition: transform 250ms ease-out;
+}
+
+footer {
+  display: block;
+  color: $dark-grey;
+  font-size: 0.75em;
+  height: 1.75em;
+  margin-top: -1.75em;
+}
